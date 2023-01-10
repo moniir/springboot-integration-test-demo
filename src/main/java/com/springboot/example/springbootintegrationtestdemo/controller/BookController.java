@@ -17,14 +17,6 @@ public class BookController {
     @PostMapping("/addbook")
     public Book addBook(@RequestBody Book book) {
         book = service.saveBook(book);
-//        //Create resource location
-//        URI location = ServletUriComponentsBuilder.fromCurrentRequest()
-//                .path("/{id}")
-//                .buildAndExpand(product.getId())
-//                .toUri();
-//
-//        //Send location in response
-//        return ResponseEntity.created(location).build();
         return book;
     }
     @GetMapping
